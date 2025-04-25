@@ -1,0 +1,259 @@
+:root {
+    --primary: #1e3a8a;         /* Navy Blue */
+    --secondary: #facc15;       /* Soft Yellow */
+    --background: #f9fafb;      /* Light Background */
+    --text: #1f2937;            /* Dark Gray */
+    --accent: #2563eb;          /* Blue Accent */
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(to right, var(--primary), #1e40af);
+    padding: 20px 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  header h1 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  
+  main {
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .book-list a {
+    background-color: white;
+    border-left: 6px solid var(--accent);
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--primary);
+    font-weight: bold;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+  }
+  
+  .book-list a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    background-color: var(--secondary);
+    color: #111827;
+  }
+  
+  footer {
+    position: relative;
+    top: 345px;
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+    font-size: 0.9rem;
+  }
+  
+  /*Book==========================================================================================================*/
+
+  :root {
+    --primary: #2563eb;
+    --secondary: #facc15;
+    --bg: #f9fafb;
+    --text: #1f2937;
+    --white: #ffffff;
+    --hover-bg: #2563eb;
+    --hover-text: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(to right, var(--primary), #1e40af);
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 300;
+  }
+  
+  main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  main h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #111827;
+  }
+  
+  .chapter-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .chapter-list a {
+    background-color: var(--white);
+    border-left: 6px solid var(--primary);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--primary);
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .chapter-list a:hover {
+    background-color: var(--hover-bg);
+    color: var(--hover-text);
+    transform: translateY(-5px);
+  }
+  
+  footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 60px;
+    font-size: 0.95rem;
+  }
+  
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    main h2 {
+      font-size: 1.5rem;
+    }
+  
+    .chapter-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  
+/*=====================================================================================================================
+
+
+  
+  /* Footer */
+  /* Footer */
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  position: relative; /* To position the copyright bar at the bottom */
+}
+
+/* Copyright Section */
+footer .copyright {
+  font-size: 0.8rem;
+  color: #ddd;
+  padding-top: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2b2b2b;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #444;
+}
+
+/* To ensure no duplicate copyright bar appears */
+footer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2b2b2b;
+  height: 0; /* Ensuring no second copyright bar */
+  border-top: none;
+}
+
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+  
+    .chapter-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .chapter-list a {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .chapter-list a {
+      font-size: 0.9rem;
+      padding: 15px;
+    }
+  }
+
+  /*===================================================================================================================
+
+  
